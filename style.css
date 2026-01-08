@@ -23,12 +23,12 @@ h2 {
 label {
     display: block;
     margin-top: 10px;
-    fotn-size: 8px;
+    text-size: 8px;
 }
 p {
     display: block;
     margin-top: 5px;
-    fotn-size: 15px;
+    text-size: 15px;
 }
 img {
     max-width: 100%;
