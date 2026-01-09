@@ -264,6 +264,7 @@ body {
 </html>
 <script>
 function saveContact() {
+    
 const saveButton = document.getElementById("saveB");
 saveButton.innerText = "Saving..."
 saveButton.style.backgroundColor = "#AB2330";
@@ -279,10 +280,13 @@ BEGIN:VCARD
 VERSION:3.0
 N:Estrella;Charles David;;;
 FN:Charles David G. Estrella
-ORG:Intern
+ORG:Click Aces
 TITLE:OJT / Intern
 TEL;TYPE=CELL:+639519014466
+TEL;TYPE=VIBER:+639519014466
+TEL;TYPE=WHATSAPP:+639519014466
 EMAIL:charlesdavidestrella@gmail.com
+ADR;TYPE=WORKs:;;Hagonoy, Bulacan
 END:VCARD
     `.trim();
 
@@ -297,5 +301,8 @@ END:VCARD
 
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
+
 }
+
+
 </script>
