@@ -7,10 +7,10 @@
 
 <style>
 :root {
-    --primary: #1b379b;
+    --primary: #AB2330;
     --dark: #1c1c1c;
     --light: #f7f9fb;
-    --text: #2f2f2f;
+    --text: #2f2f2f;    
 }
 
 body {
@@ -29,15 +29,15 @@ body {
     display: flex;
     flex-direction: column;
     border-radius: 18px;
+    padding: 10px;
 }
 
 .profile-container {
-    background: url("AMBG.png") center / cover;
+    background: url("CAMSI.png") center / cover;
     overflow: hidden;
     box-shadow: 0 25px 50px rgba(0,0,0,0.35);
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-
 }
 
 .profile-overlay {
@@ -67,7 +67,7 @@ body {
 }
 
 .profile-role {
-    font-size: 13px;
+    font-size: 10px;
     letter-spacing: 1px;
     color: #555;
     text-transform: uppercase;
@@ -75,15 +75,16 @@ body {
 
 .contact-container {
     background: #ffffff;
-    padding: 30px;
+    padding: 15px;
     box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    border: var(--primary);
 }
 
 .contact-title {
     font-size: 14px;
     letter-spacing: 2px;
     color: var(--primary);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-transform: uppercase;
     font-weight: 700;
 }
@@ -91,34 +92,34 @@ body {
 .contact-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
+    gap: 7px;
 }
 
 .contact-item {
     background: var(--light);
     border-left: 4px solid var(--primary);
     border-radius: 10px;
-    padding: 14px 16px;
+    padding: 7px 16px;
 }
 
 .contact-item label {
-    font-size: 11px;
+    font-size: 10px;
     color: #777;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 
 .contact-item p {
-    margin: 6px 0 0;
-    font-size: 15px;
+    margin: 2px 0 0;
+    font-size: 12px;
     font-weight: 600;
     color: var(--text);
 }
 
 .gov-container {
-    background: linear-gradient(135deg, #1b379b, #0f1f5c);
+    background: linear-gradient(135deg, #5c171b, #960404);
     color: #ffffff;
-    padding: 30px;
+    padding: 15px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.3);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -127,7 +128,7 @@ body {
 .gov-title {
     font-size: 14px;
     letter-spacing: 2px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-transform: uppercase;
     font-weight: 700;
 }
@@ -135,20 +136,19 @@ body {
 .gov-item {
     background: rgba(255,255,255,0.12);
     border-radius: 10px;
-    padding: 14px 16px;
-    margin-bottom: 14px;
+    padding: 3px 16px;
+    margin-bottom: 5px;
 }
-
 .gov-item label {
-    font-size: 11px;
+    font-size: 10px;
     letter-spacing: 1px;
     opacity: 0.8;
     text-transform: uppercase;
 }
 
 .gov-item p {
-    margin-top: 6px;
-    font-size: 15px;
+    margin-top: 1px;
+    font-size: 12px;
     font-weight: 600;
 }
 
@@ -165,15 +165,15 @@ body {
 .save {
     width: 100%;
     margin-top: 10px;
-    padding: 14px;
+    padding: 8px;
     border: none;
     border-radius: 12px;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
     cursor: pointer;
-    color: #1b379b;
+    color: #AB2330;
     background: linear-gradient(135deg, #ffffff, #e6ebff);
     box-shadow: 0 10px 25px rgba(0,0,0,0.25);
     transition: all 0.3s ease;
@@ -204,7 +204,7 @@ body {
             <div class="profile-role">OJT / Intern</div>
         </div>
     </div>
-
+    
     <div class="contact-container">
         <div class="contact-title">Contact Informations</div>
 
@@ -255,7 +255,7 @@ body {
             <p>XXXXXXXXXX</p>
         </div>
 
-        <button class="save" onclick="saveContact()"> Save Contact</button>
+        <button class="save" id="saveB" onclick="saveContact()"> Save Contact</button>
 
     </div>
 
@@ -265,15 +265,29 @@ body {
 </html>
 <script>
 function saveContact() {
+    
+const saveButton = document.getElementById("saveB");
+saveButton.innerText = "Saving..."
+saveButton.style.backgroundColor = "#AB2330";
+saveButton.style.color = "#f7f9ff";
+setTimeout(() => {
+    saveButton.innerText = "Saved!"
+    saveButton.style.backgroundColor = "#f7f9ff";
+saveButton.style.color =  "#AB2330";
+}, 2000);
+
     const vcard = `
 BEGIN:VCARD
 VERSION:3.0
 N:Estrella;Charles David;;;
 FN:Charles David G. Estrella
-ORG:Intern
+ORG:Click Aces
 TITLE:OJT / Intern
 TEL;TYPE=CELL:+639519014466
+TEL;TYPE=VIBER:+639519014466
+TEL;TYPE=WHATSAPP:+639519014466
 EMAIL:charlesdavidestrella@gmail.com
+ADR;TYPE=WORKs:;;Hagonoy, Bulacan
 END:VCARD
     `.trim();
 
@@ -288,5 +302,8 @@ END:VCARD
 
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
+
 }
+
+
 </script>
