@@ -7,7 +7,7 @@
 
 <style>
 :root {
-    --primary: #1b379b;
+    --primary: #AB2330;
     --dark: #1c1c1c;
     --light: #f7f9fb;
     --text: #2f2f2f;    
@@ -29,10 +29,11 @@ body {
     display: flex;
     flex-direction: column;
     border-radius: 18px;
+    padding: 10px;
 }
 
 .profile-container {
-    background: url("AMBG.png") center / cover;
+    background: url("CAMSI.png") center / cover;
     overflow: hidden;
     box-shadow: 0 25px 50px rgba(0,0,0,0.35);
     border-top-left-radius: 15px;
@@ -74,7 +75,7 @@ body {
 
 .contact-container {
     background: #ffffff;
-    padding: 25px;
+    padding: 15px;
     box-shadow: 0 15px 35px rgba(0,0,0,0.15);
     border: var(--primary);
 }
@@ -116,9 +117,9 @@ body {
 }
 
 .gov-container {
-    background: linear-gradient(135deg, #1b379b, #0f1f5c);
+    background: linear-gradient(135deg, #5c171b, #960404);
     color: #ffffff;
-    padding: 25px;
+    padding: 15px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.3);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -172,7 +173,7 @@ body {
     letter-spacing: 1px;
     text-transform: uppercase;
     cursor: pointer;
-    color: #1b379b;
+    color: #AB2330;
     background: linear-gradient(135deg, #ffffff, #e6ebff);
     box-shadow: 0 10px 25px rgba(0,0,0,0.25);
     transition: all 0.3s ease;
@@ -254,7 +255,7 @@ body {
             <p>XXXXXXXXXX</p>
         </div>
 
-        <button class="save" onclick="saveContact()"> Save Contact</button>
+        <button class="save" id="saveB" onclick="saveContact()"> Save Contact</button>
 
     </div>
 
@@ -286,6 +287,7 @@ TEL;TYPE=CELL:+639519014466
 TEL;TYPE=VIBER:+639519014466
 TEL;TYPE=WHATSAPP:+639519014466
 EMAIL:charlesdavidestrella@gmail.com
+ADR;TYPE=WORKs:;;Hagonoy, Bulacan
 END:VCARD
     `.trim();
 
