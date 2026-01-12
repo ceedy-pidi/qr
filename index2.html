@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <title>Personal Information</title>
 
     <style>
@@ -203,6 +204,17 @@
     0% { transform: rotate(0deg);}
     100% { transform: rotate(360deg);}
 }
+.contact-item label i {
+    font-size: 15px;
+  margin-right: 6px;
+  color: var(--primary); 
+}
+
+.gov-item label i{
+    font-size: 15px;
+  margin-right: 6px;
+}
+
 </style>
   </head>
 
@@ -218,65 +230,65 @@
       </div>
 
       <div class="contact-container">
-        <div class="contact-title">Contact Informations</div>
+  <div class="contact-title">Contact Informations</div>
 
-        <div class="contact-list">
-          <div class="contact-item">
-            <label>Email</label>
-            <p>charlesdavidestrella@gmail.com</p>
-          </div>
+  <div class="contact-list">
+    <div class="contact-item">
+      <label><i class="fas fa-envelope"></i> Email</label>
+      <p>charlesdavidestrella@gmail.com</p>
+    </div>
 
-          <div class="contact-item">
-            <label>Contact Number</label>
-            <p>(+63) 951 901 4466</p>
-          </div>
+    <div class="contact-item">
+      <label><i class="fas fa-phone"></i> Contact Number</label>
+      <p>(+63) 951 901 4466</p>
+    </div>
 
-          <div class="contact-item">
-            <label>WhatsApp</label>
-            <p>0951-901-4466</p>
-          </div>
+    <div class="contact-item">
+      <label><i class="fab fa-whatsapp"></i> WhatsApp</label>
+      <p>0951-901-4466</p>
+    </div>
 
-          <div class="contact-item">
-            <label>Viber</label>
-            <p>0951-901-4466</p>
-          </div>
-          
-          <div class="contact-item">
-            <label>Facebook</label>
-            <a href="https://www.facebook.com/charles.estrella05"
-              >Charles David Estrella</a>
-          </div>
-          
-        </div>
-      </div>
+    <div class="contact-item">
+      <label><i class="fab fa-viber"></i> Viber</label>
+      <p>0951-901-4466</p>
+    </div>
 
-      <div class="gov-container">
-        <div class="gov-title">Government IDs</div>
+    <div class="contact-item">
+      <label><i class="fab fa-facebook"></i> Facebook</label>
+      <a href="https://www.facebook.com/charles.estrella05"
+        >Charles David Estrella</a
+      >
+    </div>
+  </div>
+</div>
 
-        <div class="gov-item secure-id" data-real="34-5678901-2">
-          <label>SSS</label>
-          <p>•••••••••••</p>
-        </div>
+<div class="gov-container">
+  <div class="gov-title">Government IDs</div>
 
-        <div class="gov-item secure-id" data-real="1234-5678-9012">
-          <label>Pag-IBIG</label>
-          <p>•••••••••••</p>
-        </div>
+  <div class="gov-item secure-id" data-real="34-5678901-2">
+    <label><i class="fas fa-id-card"></i> SSS</label>
+    <p>•••••••••••</p>
+  </div>
 
-        <div class="gov-item secure-id" data-real="123-456-789-000">
-          <label>TIN</label>
-          <p>•••••••••••</p>
-        </div>
+  <div class="gov-item secure-id" data-real="1234-5678-9012">
+    <label><i class="fas fa-id-card"></i> Pag-IBIG</label>
+    <p>•••••••••••</p>
+  </div>
 
-        <div class="gov-item secure-id" data-real="12-345678901-2">
-          <label>PhilHealth</label>
-          <p>•••••••••••</p>
-        </div>
+  <div class="gov-item secure-id" data-real="123-456-789-000">
+    <label><i class="fas fa-id-card"></i> TIN</label>
+    <p>•••••••••••</p>
+  </div>
 
-        <button class="save" id="saveB" onclick="saveContact()">
-          Save Contact
-        </button>
-      </div>
+  <div class="gov-item secure-id" data-real="12-345678901-2">
+    <label><i class="fas fa-id-card"></i> PhilHealth</label>
+    <p>•••••••••••</p>
+  </div>
+
+  <button class="save" id="saveB" onclick="saveContact()">
+    Save Contact
+  </button>
+</div>
     </div>
     <div
       id="pinModal"
